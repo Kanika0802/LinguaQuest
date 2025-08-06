@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinguaQuest - German Learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="intro" id="intro">
+    <h1>Welcome to LinguaQuest</h1>
+    <p>Learn German in a fun and interactive way like Duolingo!</p>
+    <button onclick="showLogin()">Login</button>
+    <button onclick="showSignup()">Signup</button>
+  </div>
+
+  <div class="form" id="loginForm" style="display: none;">
+    <h2>Login</h2>
+    <input type="text" placeholder="Username"><br>
+    <input type="password" placeholder="Password"><br>
+    <button onclick="loginUser()">Login</button>
+  </div>
+
+  <div class="form" id="signupForm" style="display: none;">
+    <h2>Signup</h2>
+    <input type="text" placeholder="Username"><br>
+    <input type="password" placeholder="Password"><br>
+    <label>What's your level in German?</label><br>
+    <select>
+      <option>Beginner</option>
+      <option>Basic Knowledge</option>
+    </select><br>
+    <button onclick="signupUser()">Signup</button>
+  </div>
+
+  <div id="mainContent" style="display: none;">
+    <div class="header">
+      <div class="dashboard">Dashboard: Progress 40%</div>
+      <div class="profile" onclick="toggleProfile()">👤 Profile</div>
+    </div>
+    <div id="profileSection" style="display: none;">
+      <p>User: DemoUser</p>
+      <p>Badges: 🌟 🌟</p>
+    </div>
+
+    <div class="lessons">
+      <div class="lesson-row">
+        <span>Lesson 1: Alphabets</span>
+        <button onclick="showQuiz(1)">Take Quiz</button>
+        <span class="score">Score: 8/10</span>
+      </div>
+      <div class="quiz" id="quiz1" style="display: none;">Quiz for Lesson 1</div>
+
+      <div class="lesson-row">
+        <span>Lesson 2: Numbers</span>
+        <button onclick="showQuiz(2)">Take Quiz</button>
+        <span class="score">Score: 7/10</span>
+      </div>
+      <div class="quiz" id="quiz2" style="display: none;">Quiz for Lesson 2</div>
+
+      <div class="lesson-row">
+        <span>Lesson 3: Greetings</span>
+        <button onclick="showQuiz(3)">Take Quiz</button>
+        <span class="score">Score: 9/10</span>
+      </div>
+      <div class="quiz" id="quiz3" style="display: none;">Quiz for Lesson 3</div>
+
+      <div class="lesson-row">
+        <span>Lesson 4: Introduction in German</span>
+        <button onclick="showQuiz(4)">Take Quiz</button>
+        <span class="score">Score: 10/10</span>
+      </div>
+      <div class="quiz" id="quiz4" style="display: none;">Quiz for Lesson 4</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
