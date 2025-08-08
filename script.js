@@ -1,4 +1,3 @@
-// Language data for the app
 const languageData = {
     german: {
         name: "German",
@@ -984,3 +983,4 @@ function drawMatchingLine(item1, item2) {
     // calculate positions and draw SVG lines between the elements
     console.log('Drawing line between matched items');
 }
+
