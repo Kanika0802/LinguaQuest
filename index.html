@@ -1,79 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LinguaQuest - German Learning</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingo.com - Learn Languages</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <div class="intro" id="intro">
-    <h1>Welcome to LinguaQuest</h1>
-    <p>Learn German in a fun and interactive way like Duolingo!</p>
-    <button onclick="showLogin()">Login</button>
-    <button onclick="showSignup()">Signup</button>
-  </div>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-globe"></i>
+                <h1>Lingo.com</h1>
+            </div>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </header>
 
-  <div class="form" id="loginForm" style="display: none;">
-    <h2>Login</h2>
-    <input type="text" placeholder="Username"><br>
-    <input type="password" placeholder="Password"><br>
-    <button onclick="loginUser()">Login</button>
-  </div>
+        <main class="main-content">
+            <section class="hero">
+                <div class="hero-content">
+                    <h2 class="hero-title">Master New Languages</h2>
+                    <p class="hero-subtitle">Choose your language and start your learning journey today</p>
+                    
+                    <div class="language-selection">
+                        <h3>Select a Language</h3>
+                        <div class="language-cards">
+                            <div class="language-card" data-language="german">
+                                <div class="flag">
+                                    <i class="fas fa-flag"></i>
+                                </div>
+                                <h4>German</h4>
+                                <p>Deutsch lernen</p>
+                                <div class="difficulty">
+                                    <span class="difficulty-label">Difficulty:</span>
+                                    <div class="difficulty-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <button class="select-btn">Start Learning</button>
+                            </div>
 
-  <div class="form" id="signupForm" style="display: none;">
-    <h2>Signup</h2>
-    <input type="text" placeholder="Username"><br>
-    <input type="password" placeholder="Password"><br>
-    <label>What's your level in German?</label><br>
-    <select>
-      <option>Beginner</option>
-      <option>Basic Knowledge</option>
-    </select><br>
-    <button onclick="signupUser()">Signup</button>
-  </div>
+                            <div class="language-card" data-language="japanese">
+                                <div class="flag">
+                                    <i class="fas fa-flag"></i>
+                                </div>
+                                <h4>Japanese</h4>
+                                <p>日本語を学ぶ</p>
+                                <div class="difficulty">
+                                    <span class="difficulty-label">Difficulty:</span>
+                                    <div class="difficulty-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <button class="select-btn">Start Learning</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-  <div id="mainContent" style="display: none;">
-    <div class="header">
-      <div class="dashboard">Dashboard: Progress 40%</div>
-      <div class="profile" onclick="toggleProfile()">👤 Profile</div>
+            <section class="features">
+                <h3>Why Choose Lingo.com?</h3>
+                <div class="features-grid">
+                    <div class="feature">
+                        <i class="fas fa-brain"></i>
+                        <h4>Smart Learning</h4>
+                        <p>AI-powered lessons adapt to your learning style</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <h4>Community</h4>
+                        <p>Connect with native speakers and learners</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Learn Anywhere</h4>
+                        <p>Practice on any device, anytime</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-trophy"></i>
+                        <h4>Track Progress</h4>
+                        <p>Monitor your improvement with detailed analytics</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Lingo.com</h4>
+                    <p>Making language learning accessible to everyone</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Languages</h4>
+                    <ul>
+                        <li><a href="#german">German</a></li>
+                        <li><a href="#japanese">Japanese</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lingo.com. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
-    <div id="profileSection" style="display: none;">
-      <p>User: DemoUser</p>
-      <p>Badges: 🌟 🌟</p>
+
+    <!-- Language Selection Modal -->
+    <div class="modal" id="languageModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle">Welcome to German Learning!</h2>
+            </div>
+            <div class="modal-body">
+                <div class="lesson-selection">
+                    <h3>Choose a Lesson</h3>
+                    <div class="lesson-buttons" id="lessonButtons">
+                        <!-- Lesson buttons will be generated here -->
+                    </div>
+                </div>
+                <div class="lesson-preview" id="lessonPreview" style="display: none;">
+                    <div class="lesson-card">
+                        <h3 id="lessonTitle">Lesson Title</h3>
+                        <p id="lessonSubtitle" class="lesson-subtitle">Lesson subtitle</p>
+                        <div class="lesson-example" id="lessonExample">
+                            <!-- Lesson content will be generated here -->
+                        </div>
+                        <div class="lesson-actions">
+                            <button class="back-to-lessons-btn">Back to Lessons</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="lessons">
-      <div class="lesson-row">
-        <span>Lesson 1: Alphabets</span>
-        <button onclick="showQuiz(1)">Take Quiz</button>
-        <span class="score">Score: 8/10</span>
-      </div>
-      <div class="quiz" id="quiz1" style="display: none;">Quiz for Lesson 1</div>
-
-      <div class="lesson-row">
-        <span>Lesson 2: Numbers</span>
-        <button onclick="showQuiz(2)">Take Quiz</button>
-        <span class="score">Score: 7/10</span>
-      </div>
-      <div class="quiz" id="quiz2" style="display: none;">Quiz for Lesson 2</div>
-
-      <div class="lesson-row">
-        <span>Lesson 3: Greetings</span>
-        <button onclick="showQuiz(3)">Take Quiz</button>
-        <span class="score">Score: 9/10</span>
-      </div>
-      <div class="quiz" id="quiz3" style="display: none;">Quiz for Lesson 3</div>
-
-      <div class="lesson-row">
-        <span>Lesson 4: Introduction in German</span>
-        <button onclick="showQuiz(4)">Take Quiz</button>
-        <span class="score">Score: 10/10</span>
-      </div>
-      <div class="quiz" id="quiz4" style="display: none;">Quiz for Lesson 4</div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
